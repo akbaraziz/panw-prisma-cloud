@@ -119,4 +119,7 @@ resource "aws_instance" "web_instance" {
     "Name" : "${var.stack_name}",
     "eks:testing" = "yes"
   }
+  metadata_options {
+    http_tokens = "required"
+  }
 }
